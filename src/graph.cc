@@ -87,7 +87,7 @@ std::ostream &operator<< (std::ostream &o, const Graph &g)
 	return o;
 }
 
-Graph *Graph::load (const wxString &fname, bool &success)
+Graph *Graph::wload (const wxString &fname, bool &success)
 {
 	return (load (fname.mb_str (wxConvUTF8), success));
 }
@@ -132,7 +132,7 @@ Graph *Graph::load (const char *fname, bool &success)
 	return new_graph;
 }
 
-void Graph::save (const wxString &fname) const
+void Graph::wsave (const wxString &fname) const
 {
 	save (fname.mb_str (wxConvUTF8));
 }
@@ -377,7 +377,7 @@ wxString Graph::unique_label (int level) const
 	do {
 		if (!find (buf))
 			return buf;
-		buf[0]++;
+		buf[0]=wxUniChar(buf[0].GetValue()+1);
 		//buf.set (0, buf[0] + 1);
 	} while (buf[0] <= 'Z');
 

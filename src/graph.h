@@ -49,9 +49,9 @@ public:
 
 	friend std::ostream &operator<< (std::ostream &o, const Graph &g);
 
-	static Graph *load (const wxString &fname, bool &success);
+	static Graph *wload (const wxString &fname, bool &success);
 	static Graph *load (const char *fname, bool &success);
-	void save (const wxString &fname) const;
+	void wsave (const wxString &fname) const;
 	void save (const char *fname) const;
 
 	wxString get_tag (const char *tag) const;

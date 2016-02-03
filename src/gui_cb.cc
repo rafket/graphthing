@@ -31,7 +31,7 @@
 
 void GTFrame::cb_File_Load (wxCommandEvent &event)
 {
-	FancyFileSelection fs (this, _("Load File"), wxOPEN);
+	FancyFileSelection fs (this, _("Load File"), wxFD_OPEN);
 	bool res;
 
 	if (fs.ShowModal () == wxID_CANCEL)
@@ -56,7 +56,7 @@ void GTFrame::cb_File_Load (wxCommandEvent &event)
 
 void GTFrame::cb_File_Save (wxCommandEvent &event)
 {
-	FancyFileSelection fs (this, _("Save File"), wxSAVE, true);
+	FancyFileSelection fs (this, _("Save File"), wxFD_SAVE, true);
 
 	if (fs.ShowModal () == wxID_CANCEL)
 		return;
@@ -823,7 +823,7 @@ void GTFrame::cb_Change_Mode (wxCommandEvent &event)
         canvas->setEdgeMode (true); // directed edges
         pushStatus (_("Ready (Directed Edge Mode)."));
     }
-        
+
 
 
 	// TODO: depress the correct buttons (mainly for keyboard mode switches)

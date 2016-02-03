@@ -26,11 +26,11 @@ FancyFileSelection::FancyFileSelection (wxWindow *parent, const wxString &title,
 					const wxString &mask)
 		: wxFileDialog (parent, title, wxT(""), wxT(""), wxT("*.*"), style)
 {
-	if (style & wxOPEN)
+/*    if (style & wxOPEN)
 		style |= wxHIDE_READONLY;
 	else if (style & wxSAVE)
 		style |= wxOVERWRITE_PROMPT;
-	SetStyle (style);
+	SetStyle (style);*/
 
 	if (file_types) {
 		wxString wc = wxT("");

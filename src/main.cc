@@ -64,7 +64,7 @@ bool GTApp::OnInit ()
 	SetTopWindow (win);
 
 	if (argc > 1)
-		win->loadGraph (wxString (argv[1], wxConvUTF8));
+		win->loadGraph (wxString ((const wchar_t *)argv[1], wxConvUTF8));
 
 	return true;
 }

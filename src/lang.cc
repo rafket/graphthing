@@ -19,8 +19,8 @@ int Translator::warn_untranslated;
 
 
 static struct lang_info {
-	char *code;	// ISO639 code (e.g. "de")
-	char *name;	// full name (e.g. "German")
+	const char *code;	// ISO639 code (e.g. "de")
+	const char *name;	// full name (e.g. "German")
 	Language lang;	// enum value (e.g. German)
 } languages[] = {
 	{ "ca", "Catalan", Catalan },

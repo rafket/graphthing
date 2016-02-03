@@ -1,5 +1,5 @@
 /* XPM */
-static char * edge_mode_xpm[] = {
+static const char * edge_mode_xpm[] = {
 "20 20 31 1",
 " 	c None",
 ".	c #FFFFFF",

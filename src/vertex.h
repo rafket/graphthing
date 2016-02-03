@@ -35,7 +35,7 @@ public:
 
 
 	Vertex (wxString &lbl, int _x, int _y);
-	Vertex (char *lbl, int _x, int _y);
+	Vertex (const char *lbl, int _x, int _y);
 	Vertex (const Vertex &other);
 
 	unsigned int degree () const;

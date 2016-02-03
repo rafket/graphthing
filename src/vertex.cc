@@ -14,7 +14,7 @@ Vertex::Vertex (wxString &lbl, int _x, int _y)
 {
 }
 
-Vertex::Vertex (char *lbl, int _x, int _y)
+Vertex::Vertex (const char *lbl, int _x, int _y)
 	: label (wxString (lbl, wxConvUTF8)), x (_x), y (_y),
 						selected (false), next (0)
 {

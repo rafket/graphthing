@@ -97,7 +97,7 @@ public:
 
 extern Translator *translator;	// defined in main.cc
 
-#define _(str)		(translator->lookup (wxT(str)))
+//#define _(str)		(translator->lookup (wxT(str)))
 
 #else	// ! ENABLE_NLS
 

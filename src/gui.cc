@@ -274,7 +274,7 @@ void GTFrame::setUndoText (wxString description)
 	if (description != wxT(""))
 		s_txt += wxT(" (") + description + wxT(")");
 	s_txt += wxT("\tCtrl-Z");
-	edit_Undo->SetText (s_txt);
+	edit_Undo->SetItemLabel (s_txt);
 }
 
 GTFrame::GTFrame ()

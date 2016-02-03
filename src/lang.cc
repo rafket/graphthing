@@ -342,7 +342,7 @@ void Translator::verify_phrases () const
 bool Translator::guess_language (bool ignore_cc)
 {
 	// First, check environment variables
-	char *envvars[3] = { "LANGUAGE", "LC_ALL", "LANG" };
+	const char *envvars[3] = { "LANGUAGE", "LC_ALL", "LANG" };
 	for (int i = 0; i < 3; ++i) {
 		char *lang = getenv (envvars[i]);
 		if (!lang)
